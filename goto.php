@@ -1,4 +1,5 @@
 <?php
 $url = base64_decode($_GET['url']);
+header("Location: ".$url);
+exit();
 ?>
-<html lang="en">  <head> <meta name="robots" content="noindex,nofollow"> <meta content="origin" name="referrer">  <script nonce="yUo788/t/DnYAs6YU9/QnA==">window.google = {};(function(){var f=function(b,d){this.a=b===c&&d||"";this.g=e};f.prototype.i=!0;f.prototype.h=function(){return this.a.toString()};var g=/^(?:(?:https?|mailto|ftp):|[^:/?#]*(?:[/?#]|$))/i,e={},c={};google.navigateTo=function(b,d,a){b!=d&&b.google?b.google.r&&(b.google.r=0,b=b.location,a instanceof f||a instanceof f||(a="object"==typeof a&&a.i?a.h():String(a),g.test(a)||(a="about:invalid#zClosurez"),a=new f(c,a)),b.href=a instanceof f&&a.constructor===f&&a.g===e?a.a:"type_error:SafeUrl",d.location.replace("about:blank")):d.location.replace(a)};}).call(this);(function(){var redirectUrl='<?php echo $url; exit(); ?>';google.navigateTo(parent,window,redirectUrl);})();</script> </head>  </html>
